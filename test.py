@@ -9,7 +9,6 @@ def generate_user_id(full_name, dob):
 
 
 def process_data(data):
-
     numbers = []
     alphabets = []
     highest_lowercase = []
@@ -59,4 +58,4 @@ def handle_get():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)  # Specify the port here
