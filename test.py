@@ -15,9 +15,9 @@ def process_data(data):
 
     for item in data:
         try:
-            if item.isdigit():  # Check if the item is a digit string
+            if item.isdigit():  
                 numbers.append(int(item))
-            elif item.isalpha():  # Check if the item is an alphabet string
+            elif item.isalpha(): 
                 alphabets.append(item.lower())
                 if item.islower():
                     highest_lowercase.append(item)
@@ -41,8 +41,8 @@ def handle_post():
         response_data = OrderedDict([
             ("is_success", True),
             ("user_id", generate_user_id("Aditya Ramguru", datetime.datetime(year=2003, month=11, day=9))),
-            ("email", "aditya.ramguru2021@vitstudent.ac.in"),  # Replace with your email
-            ("roll_number", "21BCB0004"),  # Replace with your roll number (optional)
+            ("email", "aditya.ramguru2021@vitstudent.ac.in"), 
+            ("roll_number", "21BCB0004"),  
             ("numbers", numbers),
             ("alphabets", alphabets),
             ("highest_lowercase_alphabet", highest_lowercase),
@@ -58,4 +58,4 @@ def handle_get():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)  # Specify the port here
+    app.run(debug=True, port=5000) 
